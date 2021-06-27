@@ -2,7 +2,10 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/Brazil">Brazil</router-link>
+      <router-link to="/Hawaii">Hawaii</router-link>
+      <router-link to="/Jamaica">Jamaica</router-link>
+      <router-link to="/Panama">Panama</router-link>
     </div>
     <router-view />
   </div>
@@ -24,6 +27,7 @@
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  padding: 0 10px;
 }
 
 #nav a.router-link-exact-active {
