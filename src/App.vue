@@ -2,7 +2,8 @@
   <div id="app">
     <TheNavigation />
     <!-- <transition name="slide" mode="out-in"> -->
-    <transition name="moveUp">
+    <!-- <transition name="moveUp"> -->
+    <transition name="fade">
       <router-view :key="$route.path" />
     </transition>
   </div>
@@ -63,5 +64,14 @@ export default {
   100% {
     transform: translateY(-400px);
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
