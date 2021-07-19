@@ -34,6 +34,12 @@ export default {
 <style scoped>
 #nav {
   display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border: 1px solid gray;
+  z-index: 1;
 }
 #nav a {
   font-weight: bold;
