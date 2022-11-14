@@ -47,7 +47,7 @@ import GoBack from "@/components/GoBack";
 
 export default {
   components: {
-    GoBack
+    GoBack,
   },
   data() {
     return {};

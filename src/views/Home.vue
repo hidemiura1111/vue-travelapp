@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-    <h1>
-      All Destination
-    </h1>
+    <h1>All Destination</h1>
     <div class="destinations">
       <div v-for="destination in destinations" :key="destination.name">
         <router-link :to="{ name: 'DestinationDetails', params: { slug: destination.slug } }">
@@ -23,16 +21,16 @@
 
 <script>
 // @ is an alias to /src
-import store from "@/store.js"
+import store from "@/store.js";
 
 export default {
   name: "Home",
   components: {},
   data() {
     return {
-      destinations: store.destinations
+      destinations: store.destinations,
     };
-  }, 
+  },
 };
 </script>
 

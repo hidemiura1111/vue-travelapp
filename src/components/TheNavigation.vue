@@ -3,9 +3,7 @@
     <p class="logo">The Vue School Travel App</p>
     <ul class="nav-links">
       <li class="links">
-        <router-link to="/">
-          Home
-        </router-link>
+        <router-link to="/">Home</router-link>
       </li>
       <li v-for="destination in destinations" :key="destination.name" class="links">
         <router-link :to="{

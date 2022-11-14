@@ -14,9 +14,9 @@ import TheNavigation from "@/components/TheNavigation"
 
 export default {
   components: {
-    TheNavigation
-  }
-}
+    TheNavigation,
+  },
+};
 </script>
 
 <style>
