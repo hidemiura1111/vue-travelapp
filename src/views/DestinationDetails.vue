@@ -22,7 +22,7 @@
           <router-link
             :to="{
               name: 'experienceDetails',
-              params: { experienceSlug: experience.slug},
+              params: { experienceSlug: experience.slug },
               hash: '#experience',
             }"
           >
@@ -56,16 +56,16 @@ export default {
     slug: {
       type: String,
       required: true,
-    }
+    },
   },
   computed: {
     destination() {
       return store.destinations.find(
-        destination => destination.slug === this.slug
-      )
-    }
-  }
-}
+        (destination) => destination.slug === this.slug
+      );
+    },
+  },
+};
 </script>
 
 <style scoped>
