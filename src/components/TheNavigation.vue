@@ -5,12 +5,18 @@
       <li class="links">
         <router-link to="/">Home</router-link>
       </li>
-      <li v-for="destination in destinations" :key="destination.name" class="links">
-        <router-link :to="{
-          name: 'DestinationDetails',
-          params: {slug: destination.slug}
-        }">
-        {{ destination.name }}
+      <li
+        v-for="destination in destinations"
+        :key="destination.name"
+        class="links"
+      >
+        <router-link
+          :to="{
+            name: 'DestinationDetails',
+            params: { slug: destination.slug }
+          }"
+        >
+          {{ destination.name }}
         </router-link>
       </li>
       <li class="links">
@@ -21,16 +27,16 @@
 </template>
 
 <script>
-import store from '@/store'
+import store from "@/store";
+
 export default {
   data() {
     return {
-      destinations: store.destinations
+      destinations: store.destinations,
     };
   },
 };
 </script>
-
 
 <style scoped>
 #nav {
@@ -46,7 +52,6 @@ export default {
   font-weight: bold;
   color: #2c3e50;
   text-decoration: none;
-  /* padding: 0 10px; */
 }
 #nav a.vue-school-active-class {
   color: #42b983;

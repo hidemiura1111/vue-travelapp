@@ -20,18 +20,19 @@ export default {
       username: null,
       passoword: null,
     };
-  }, methods: {
+  },
+  methods: {
     login() {
       store.user = this.username;
       const redirectPath = this.$route.query.redirect || "/";
       this.$router.push(redirectPath);
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
-.form{
+.form {
   display: flex;
   flex-direction: column;
   max-width: 400px;

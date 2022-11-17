@@ -1,15 +1,15 @@
 <template>
-<section>
-  <!-- <h1>Experiences</h1> -->
-  <h2>{{ experience.name }}</h2>
-  <div class="experience-details">
-    <img
-      :src="require(`@/assets/${experience.image}`)"
-      :alt="experience.name"
-    />
-    <p>{{ experience.description }}</p>
-  </div>
-</section>
+  <section>
+    <!-- <h1>Experiences</h1> -->
+    <h2>{{ experience.name }}</h2>
+    <div class="experience-details">
+      <img
+        :src="require(`@/assets/${experience.image}`)"
+        :alt="experience.name"
+      />
+      <p>{{ experience.description }}</p>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -24,7 +24,7 @@ export default {
     experienceSlug: {
       type: String,
       required: true,
-    }
+    },
   },
   data() {
     return {};
@@ -32,16 +32,16 @@ export default {
   computed: {
     destination() {
       return store.destinations.find(
-        destination => destination.slug === this.slug
+        (destination) => destination.slug === this.slug
       );
     },
     experience() {
       return this.destination.experiences.find(
-        experience => experience.slug === this.experienceSlug
+        (experience) => experience.slug === this.experienceSlug
       );
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -54,7 +54,7 @@ img {
 .experience-details {
   display: flex;
   justify-content: space-between;
-  padding: 40px 0; 
+  padding: 40px 0;
 }
 p {
   margin: 0 40px;
